@@ -19,7 +19,7 @@ public class StudentService {
         return studentRepository.findAll();
     }
 
-    public StudentEntity getstudentById(Integer studentId) {
+    public StudentEntity getStudentById(Integer studentId) {
         Optional<StudentEntity> student = studentRepository.findById(studentId);
         if (student.isPresent()) {
             return student.get();
@@ -27,12 +27,12 @@ public class StudentService {
         return null;
     }
 
-    public StudentEntity saveStudent(StudentEntity StudentEntity) {
-        StudentEntity student = studentRepository.save(StudentEntity);
+    public StudentEntity saveStudent(StudentEntity studentEntity) {
+        StudentEntity student = studentRepository.save(studentEntity);
         return student;
     }
 
-    public void deletestudentById(Integer studentId) {
+    public void deleteStudentById(Integer studentId) {
         studentRepository.deleteById(studentId);
     }
 }

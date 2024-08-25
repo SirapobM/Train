@@ -28,5 +28,5 @@ public class FacultyEntity {
     private String facultyName;
 
     @OneToMany(mappedBy = "faculty")
-    private List<StudentEntity> stidents;
+    private List<StudentEntity> students;
 }

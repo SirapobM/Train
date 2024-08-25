@@ -31,7 +31,7 @@ public class StudentEntity {
     private Integer studentId;
     private String studentCode;
     private String studentFirstName;
-    private String studenLastName;
+    private String studentLastName;
 
     @ManyToOne
     @JoinColumn(name = "faculty_id")

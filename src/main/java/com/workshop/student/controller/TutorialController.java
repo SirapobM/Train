@@ -12,13 +12,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping("/tutorial")
 public class TutorialController {
-
     @GetMapping("/")
-    public String getTutorial(
+    public String getMethodName(
             @RequestParam(name = "id", required = false, defaultValue = "0") Integer id) {
         System.out.println("---- getTutorial ----");
         System.out.println("ID: " + id);
-        return "index";
+        return "template";
     }
 
     @GetMapping("/{id}")
@@ -29,21 +28,13 @@ public class TutorialController {
         return "index";
     }
 
-    // @PostMapping("/")
-    // public String postTutorial(
-    // @RequestParam(name = "id", required = false, defaultValue = "0") Integer id)
-    // {
-    // System.out.println("---- getTutorial ----");
-    // System.out.println("ID: " + id);
-    // return "index";
-    // }
-
     @PostMapping("/")
-    public String postTutorail(
+    public String postTutorial(
             @RequestParam() Map<String, String> param) {
-        System.out.println("---- postTutorial ----");
+        System.out.println("---- PostTutorial ----");
         System.out.println("ID: " + param.get("id"));
         System.out.println("Code: " + param.get("code"));
         return "index";
     }
+
 }

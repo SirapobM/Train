@@ -11,6 +11,7 @@ import com.workshop.student.repository.FacultyRepository;
 
 @Service
 public class FacultyService {
+
     @Autowired
     private FacultyRepository facultyRepository;
 
@@ -26,7 +27,7 @@ public class FacultyService {
         return null;
     }
 
-    public FacultyEntity saveEntity(FacultyEntity facultyEntity) {
+    public FacultyEntity saveFaculty(FacultyEntity facultyEntity) {
         FacultyEntity faculty = facultyRepository.save(facultyEntity);
         return faculty;
     }
